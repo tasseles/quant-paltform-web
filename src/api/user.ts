@@ -6,14 +6,25 @@ interface userType extends Promise<any> {
   info?: object;
 }
 
+interface AdminLoginRes extends Promise<any> {
+  code?: number;
+  msg?: string;
+  data?: object;
+}
+
+interface AdminLoginData {
+  password: string;
+  username: string;
+}
+
 // 获取验证码
 export const getVerify = (): userType => {
   return http.request("get", "/captcha");
 };
 
 // 登录
-export const getLogin = (data: object) => {
-  return http.request("post", "/login", { data });
+export const getLogin = (data: AdminLoginData): AdminLoginRes => {
+  return http.request("post", "/users/login", { data });
 };
 
 // 刷新token
