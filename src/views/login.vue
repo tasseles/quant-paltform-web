@@ -7,13 +7,23 @@ import { addClass, removeClass } from "/@/utils/operate";
 import bg from "/@/assets/login/bg.png";
 import avatar from "/@/assets/login/avatar.svg?component";
 import illustration from "/@/assets/login/illustration.svg?component";
+import { getLogin } from "/@/api/user";
+import { setToken } from "/@/utils/auth";
+import { hex_md5 } from "/@/utils/md5";
 
 const router = useRouter();
 
-let user = ref("admin");
-let pwd = ref("123456");
-
-const onLogin = (): void => {
+let user = ref("wangyang");
+let pwd = ref("Sy1479&!");
+const onLogin = () => {
+  getLogin({
+    username: user.value,
+    password: hex_md5(pwd.value + "Sy@2021")
+  }).then(data => {
+    if (data) {
+      setToken(data.data.sessionId);
+    }
+  });
   storageSession.setItem("info", {
     username: "admin",
     accessToken: "eyJhbGciOiJIUzUxMiJ9.test"
