@@ -18,7 +18,7 @@ const onLogin = (): void => {
     username: "admin",
     accessToken: "eyJhbGciOiJIUzUxMiJ9.test"
   });
-  initRouter("admin").then(() => {});
+  initRouter();
   router.push("/");
 };
 

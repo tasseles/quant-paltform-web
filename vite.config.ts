@@ -61,6 +61,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
       // 是否开启 https
       https: false,
       // 端口号
+      open: true, // 是否自动打开浏览器
       port: VITE_PORT,
       host: "0.0.0.0",
       // 本地跨域代理
