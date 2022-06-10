@@ -25,6 +25,9 @@ menus:
   hsfourZeroFour: "404"
   hsfourZeroOne: "403"
   hsFive: "500"
+  hsIntelligentAnalysis: IntelligentAnalysis
+  hsDashboard: Dashboard
+  hsTableauConfiguration: Tableau-Configuration
   permission: Permission Manage
   permissionPage: Page Permission
   permissionButton: Button Permission

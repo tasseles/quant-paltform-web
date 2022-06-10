@@ -25,6 +25,9 @@ menus:
   hsfourZeroFour: "404"
   hsfourZeroOne: "403"
   hsFive: "500"
+  hsIntelligentAnalysis: "智能分析"
+  hsDashboard: "数据大盘"
+  hsTableauConfiguration: "Tableau Server配置"
   permission: 权限管理
   permissionPage: 页面权限
   permissionButton: 按钮权限
